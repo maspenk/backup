@@ -1,0 +1,20 @@
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# floating terminal emulator
+super + ctrl + Return
+	st -t 'st+'
+
+# screen brightness controls
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+	xbacklight {-inc 5, -dec 5}
+
+# pulseaudio controls speaker volume up,down & toggle muted
+{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
+	{pamixer --increase 2, pamixer --decrease 2, pamixer -t}
+
+# print entire screen
+Print
+	/usr/bin/scrot
+	
