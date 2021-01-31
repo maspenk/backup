@@ -8,13 +8,20 @@ super + ctrl + Return
 
 # screen brightness controls
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
-	xbacklight {-inc 5, -dec 5}
+	light {-A 5, -U 5}
 
-# pulseaudio controls speaker volume up,down & toggle muted
+# pulseaudio 
+# {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
+#	{pamixer --increase 2, pamixer --decrease 2, pamixer -t}
+
+# alsa 
 {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
-	{pamixer --increase 2, pamixer --decrease 2, pamixer -t}
+        {amixer sset Master 5%+, amixer sset Master 5%-, amixer sset Master toggle}
 
-# print entire screen
+# print entire screen(scrot)
 Print
 	/usr/bin/scrot
-	
+
+# print regional screen(flameshot)
+super + Print
+	flameshot gui
