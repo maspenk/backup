@@ -11,12 +11,12 @@ super + ctrl + Return
 	light {-A 5, -U 5}
 
 # pulseaudio 
-# {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
-#	{pamixer --increase 2, pamixer --decrease 2, pamixer -t}
+{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
+	{pamixer --increase 2, pamixer --decrease 2, pamixer -t}
 
 # alsa 
-{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
-        {amixer sset Master 5%+, amixer sset Master 5%-, amixer sset Master toggle}
+#{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
+#        {amixer sset Master 5%+, amixer sset Master 5%-, amixer sset Master toggle}
 
 # print entire screen(scrot)
 Print
