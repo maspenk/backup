@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# For dwmstatus
-while true; do
-    xsetroot -name " $($HOME/.config/dwm-status-bar/memory.sh)  $($HOME/.config/dwm-status-bar/filesystem.sh)  $($HOME/.config/dwm-status-bar/volume.sh)  $(date +" 0%u%y%m%d%H%M")  $($HOME/.config/dwm-status-bar/bat-state.sh)  $($HOME/.config/dwm-status-bar/bat-capacity.sh)   MASPENK "
-    sleep 1
-done
-
