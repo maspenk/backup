@@ -8,7 +8,7 @@ super + ctrl + Return
 
 # screen brightness controls
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
-	light {-A 5, -U 5}
+	xbacklight {-inc 5, -dec 5}
 
 # pulseaudio 
 {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
