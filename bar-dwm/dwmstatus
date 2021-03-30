@@ -2,7 +2,7 @@
 
 # For dwmstatus
 while true; do
-	xsetroot -name " $($HOME/.config/bar-dwm/memory.sh)  $($HOME/.config/bar-dwm/filesystem.sh)  $($HOME/.config/bar-dwm/backlight.sh)  $($HOME/.config/bar-dwm/volume.sh)  $( date +" %a,%d|%m|%y   %H:%M")  $($HOME/.config/bar-dwm/bat-state.sh)$($HOME/.config/bar-dwm/bat-capacity.sh)   MASPENK "
+	xsetroot -name "$($HOME/.config/bar-dwm/iwd.sh)  $($HOME/.config/bar-dwm/memory.sh)  $($HOME/.config/bar-dwm/filesystem.sh)  $($HOME/.config/bar-dwm/backlight.sh)  $($HOME/.config/bar-dwm/volume.sh)  $( date +" %A %d/%m/%y   %H:%M")  $($HOME/.config/bar-dwm/bat-state.sh)$($HOME/.config/bar-dwm/bat-capacity.sh)   MASPENK "
     sleep 1
 done
 
