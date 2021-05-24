@@ -1,1 +1,1 @@
-this is my personal dwm status-bar on my dwm workflow
+this is my personal statusbar using xsetroot on my dwm workflow
