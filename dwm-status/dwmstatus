@@ -2,6 +2,6 @@
 
 # configure your path directory
 while true; do
-	xsetroot -name "$($HOME/.config/dwm-status/wlan.sh) $($HOME/.config/dwm-status/memory.sh)  $($HOME/.config/dwm-status/filesystem.sh)  $($HOME/.config/dwm-status/backlight.sh)  $($HOME/.config/dwm-status/volume.sh)  $(date +" %H:%M   %A,%y/%m/%d")  $($HOME/.config/dwm-status/bat-capacity.sh)$($HOME/.config/dwm-status/bat-state.sh)   MASPENK"
+	xsetroot -name "$($HOME/.config/dwm-status/wlan.sh)  $($HOME/.config/dwm-status/temperature.sh)  $($HOME/.config/dwm-status/memory.sh)  $($HOME/.config/dwm-status/filesystem.sh)  $($HOME/.config/dwm-status/volume.sh)  $(date +"DAY:%u  DAT:%d/%m/%y  TIM:%H.%M")  $($HOME/.config/dwm-status/bat-capacity.sh)$($HOME/.config/dwm-status/bat-state.sh)"
     sleep 1
 done
