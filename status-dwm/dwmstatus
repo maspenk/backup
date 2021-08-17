@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# configure your path directory
+while true; do
+	xsetroot -name "$($HOME/.config/dwm-status/wifi.sh) $($HOME/.config/dwm-status/temperature.sh)  $($HOME/.config/dwm-status/backlight.sh)  $($HOME/.config/dwm-status/memory.sh)  $($HOME/.config/dwm-status/volume.sh)  $(date +" %d.%m.%Y   %H:%M")  $($HOME/.config/dwm-status/bat-capacity.sh)$($HOME/.config/dwm-status/bat-state.sh)"
+    sleep 1
+done
