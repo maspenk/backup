@@ -11,8 +11,8 @@ if	[ $jack_stat = "yes" ]; then
 	icon_ou_on=" "
 	icon_ou_off=" "
 else
-    icon_ou_on="墳 "
-    icon_ou_off="婢 "
+    	icon_ou_on="墳 "
+    	icon_ou_off="婢 "
 fi
 
 if 	[ $ou_mute = "0" ]; then
