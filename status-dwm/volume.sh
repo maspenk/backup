@@ -9,10 +9,10 @@ jack_stat=$($HOME/.config/dwm-status/has_headphone)
 
 if	[ $jack_stat = "yes" ]; then
 	icon_ou_on=" "
-	icon_ou_off=" "
+	icon_ou_off=" Ø"
 else
     	icon_ou_on="墳 "
-    	icon_ou_off="婢 "
+    	icon_ou_off="婢 Ø"
 fi
 
 if 	[ $ou_mute = "0" ]; then
@@ -24,7 +24,7 @@ fi
 if	[ $in_mute = "0" ];then
 	in_show=" $in_vol"
 else
-	in_show=" -"
+	in_show=" Ø"
 fi
 
 echo "$ou_show  $in_show"
