@@ -1,9 +1,11 @@
 #!/bin/sh
 
-wifi=$(wpa_cli status | grep -w ssid | sed 's/ssid=/直 /g')
-
-if [ ! -z "$wifi" ];then
-	echo " $wifi"
+#wpa_cli only:
+#wifi=$(wpa_cli status | grep -w ssid | sed 's/ssid=/直 /g')
+wifi=$(iwctl station wlan0 show | grep -w "Connected network" | awk '{for(i=3;i<=NF;++i)print $i}')
+if [ -z "$wifi" ]
+then
+      echo ""
 else
-	echo ""
+      echo "直 $wifi "
 fi
