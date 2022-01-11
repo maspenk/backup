@@ -11,12 +11,20 @@ super + ctrl + Return
 	xbacklight {-inc 5, -dec 5}
 
 # pulseaudio control (pulsemixer)
-{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute, XF86AudioMicMute}
-        pulsemixer {--change-volume +2 --id 0, --change-volume -2 --id 0, --toggle-mute --id 0, --toggle-mute --id 1}
+#{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute, XF86AudioMicMute}
+#        pulsemixer {--change-volume +2 --id 0, --change-volume -2 --id 0, --toggle-mute --id 0, --toggle-mute --id 1}
+
+# pipewire up/down output sound
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+        pamixer {--allow-boost -i 5, --allow-boost -d 5}
+
+# pipewire mute out/input sound
+{XF86AudioMute, XF86AudioMicMute}
+        pamixer {-t, --default-source -t}
 
 # print entire screen(scrot)
 super + Print
-	scrot
+	flameshot full -p $HOME/Pictures/screenshot
 
 # print regional screen(flameshot)
 super + Print + shift
