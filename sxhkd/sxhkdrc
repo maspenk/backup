@@ -6,23 +6,14 @@ super + Escape
 super + ctrl + Return
 	st -t 'st+'
 
-# screen brightness controls
+# xbacklight(acpilight)
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
 	xbacklight {-inc 5, -dec 5}
+# Alsa
+{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute, XF86AudioMicMute}
+	amixer {-c 1 set Master 2dB+, -c 1 set Master 2dB-, -c 1 set Master toggle, -c 1 set Capture toggle}
 
-# pulseaudio control (pulsemixer)
-#{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute, XF86AudioMicMute}
-#        pulsemixer {--change-volume +2 --id 0, --change-volume -2 --id 0, --toggle-mute --id 0, --toggle-mute --id 1}
-
-# pipewire up/down output sound
-{XF86AudioRaiseVolume, XF86AudioLowerVolume}
-        pamixer {--allow-boost -i 5, --allow-boost -d 5}
-
-# pipewire mute out/input sound
-{XF86AudioMute, XF86AudioMicMute}
-        pamixer {-t, --default-source -t}
-
-# print entire screen(scrot)
+# print entire screen(flameshot)
 super + Print
 	flameshot full -p $HOME/Pictures/screenshot
 
@@ -30,6 +21,6 @@ super + Print
 super + Print + shift
 	flameshot gui
 
-# lockscreen(slock)
+# open powermenu script
 super + shift + backslash
-	slock
+	$HOME/.local/share/scripts/powermenu.sh
