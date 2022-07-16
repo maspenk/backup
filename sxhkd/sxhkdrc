@@ -4,7 +4,7 @@ super + Escape
 
 # floating terminal emulator
 super + ctrl + Return
-	st -t 'st+'
+	urxvtc -title 'urxvt+'
 
 # xbacklight(acpilight)
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
