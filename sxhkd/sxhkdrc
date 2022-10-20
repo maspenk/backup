@@ -6,9 +6,9 @@ super + Escape
 super + ctrl + Return
 	urxvtc -title 'urxvt+'
 
-# xbacklight(acpilight)
+# xbacklight(light)
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
-	xbacklight {-inc 5, -dec 5}
+	light {-A 5, -U 5}
 # Alsa
 {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute, XF86AudioMicMute}
 	amixer {-c 1 set Master 2dB+, -c 1 set Master 2dB-, -c 1 set Master toggle, -c 1 set Capture toggle}
