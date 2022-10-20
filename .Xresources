@@ -1,5 +1,6 @@
 ! URxvt configuration
-URxvt*font:		xft:xos4 Terminus:size=8
+URxvt*font:       xft:JetBrainsMono Nerd Font Bandit:pixelsize=10, \
+                  xft:Noto Color Emoji:pixelsize=10
 URxvt*termName: 	rxvt
 URxvt*scrollBar:	false
 URxvt.saveLines:	50000
