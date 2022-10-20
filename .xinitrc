@@ -3,7 +3,7 @@ urxvtd --quiet --opendisplay --fork &
 xbanish &                                                                                                                                                                                                                         
 xset b off    
 xrdb $HOME/.Xresources    
-xbacklight -set 10    
+light -S 15  
     
 # android-studio on dwm    
 export _JAVA_AWT_WM_NONREPARENTING=1    
@@ -15,5 +15,5 @@ fi
     
 dwm    
 while true; do    
-        /usr/local/bin/dwm 2> ~/.dwm.log    
+        /usr/local/bin/dwm 2> /dev/null  
 done    
